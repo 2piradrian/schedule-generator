@@ -10,7 +10,7 @@
                 "${workspaceFolder}/main.cpp",                
                 "${workspaceFolder}/models/subject.cpp",     
                 "-o",
-                "${workspaceFolder}/programa.exe"             
+                "${workspaceFolder}/scheduler.exe"             
             ],
             "options": {
                 "cwd": "${fileDirname}"
