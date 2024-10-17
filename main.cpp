@@ -1,19 +1,37 @@
 #include <iostream>
-#include <locale>
-#include <codecvt>
 
 #include "./models/subject.h"
 
+void showMenu() {
+    std::wcout << L"Lista de Opciones" << std::endl;
+    std::wcout << L"1. Cargar listado de horarios" << std::endl;
+    std::wcout << L"2. Inscribirse a materias" << std::endl;
+    std::wcout << L"3. Desinscribirse de materias" << std::endl;
+    std::wcout << L"4. Mostrar combinaciones de horarios" << std::endl;
+    std::wcout << L"0. Salir" << std::endl;
+}
+
 int main() {
-    // Create a Subject object
-    Subject subject1("COM-06", "Programacion I", 1, "08:00", "10:00");
-    Subject subject2("COM-07", "Programacion II", 2, "10:00", "12:00");
 
-    // Print the details of the subject
-    subject1.print();
-    subject2.print();
+    uint8_t option;
+    
+    do {
+        showMenu();
 
-    std::cin.get();
+        std::cin >> option;
+
+        switch (option) {
+            case 1:
+                break;
+            case 0:
+                break;
+            default:
+                std::wcout << L"Opcion invalida. Intente de nuevo." << std::endl;
+                break;
+        }
+    }
+    while (option != 0);
+    
 
     return 0;
 }
