@@ -13,7 +13,6 @@ int main() {
     subject1.print();
     subject2.print();
 
-    std::cout << "Presiona ENTER para salir" << std::endl;
     std::cin.get();
 
     return 0;
