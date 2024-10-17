@@ -13,7 +13,7 @@ void showMenu() {
 
 int main() {
 
-    uint8_t option;
+    int option;
     
     do {
         showMenu();
