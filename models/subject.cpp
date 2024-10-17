@@ -11,19 +11,42 @@ Subject::Subject(std::string commission, std::string name, int day, std::string 
     this->endTime = convertTimeToInteger(endSchedule);
 }
 
-// Método para imprimir los detalles de la asignatura
+// Imprimir los detalles de la asignatura
 void Subject::print() const {
-    std::cout << std::setw(15) << std::left << commission 
-              << std::setw(10) << std::left << day 
-              << std::setw(12) << std::left << startTime 
-              << std::setw(10) << std::left << endTime 
-              << std::setw(10) << std::left << name << std::endl;
+    std::cout << std::setw(10) << std::left << commission 
+              << std::setw(25) << std::left << name 
+              << std::setw(10) << std::left << convertDayToString(day) 
+              << std::setw(10) << std::left << startSchedule 
+              << std::setw(10) << std::left << endSchedule 
+              << std::endl;
 }
 
-// Método para convertir un horario en formato HH:MM a un entero (segundos)
+// Convertir un horario en formato HH:MM a un entero (segundos)
 int Subject::convertTimeToInteger(std::string time) const {
     int hours = std::stoi(time.substr(0, 2));
     int minutes = std::stoi(time.substr(3, 2));
 
     return hours * 3600 + minutes * 60;
+}
+
+// Convertir día de la semana a string
+std::string Subject::convertDayToString(int day) const {
+    switch (day) {
+        case 1:
+            return "Lunes";
+        case 2:
+            return "Martes";
+        case 3:
+            return "Miércoles";
+        case 4:
+            return "Jueves";
+        case 5:
+            return "Viernes";
+        case 6:
+            return "Sábado";
+        case 7:
+            return "Domingo";
+        default:
+            return "Día inválido";
+    }
 }

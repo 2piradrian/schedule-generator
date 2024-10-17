@@ -17,12 +17,14 @@ public:
     // Constructor
     Subject(std::string commission, std::string name, int day, std::string startSchedule, std::string endSchedule);
 
-    // Método para imprimir los detalles de la asignatura
+    // Imprimir los detalles de la asignatura
     void print() const;
 
 private:
-    // Método para convertir un horario en formato HH:MM a un entero
+    // Convertir un horario en formato HH:MM a un entero
     int convertTimeToInteger(std::string time) const;
+    // Convertir día de la semana a string
+    std::string convertDayToString(int day) const;
 };
 
 #endif // SUBJECT_H
