@@ -1,4 +1,4 @@
-#ifndef SUBJECT_H  // Directiva de preprocesador para evitar inclusiones múltiples
+#ifndef SUBJECT_H
 #define SUBJECT_H
 
 #include <iostream>
