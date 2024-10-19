@@ -4,7 +4,6 @@
 // Mostrar el menú principal
 void UIService::showMainMenu() const {
     clearScreen();
-
     std::wcout << L"+--------------------------------------+" << std::endl;
     std::wcout << L"|            Menu Principal            |" << std::endl;
     std::wcout << L"+--------------------------------------+" << std::endl;
@@ -15,6 +14,15 @@ void UIService::showMainMenu() const {
     std::wcout << L"| 0. Salir                             |" << std::endl;
     std::wcout << L"+--------------------------------------+" << std::endl;
     std::wcout << L"\nSeleccione una opcion: " << std::endl;
+}
+
+// Mostrar mensaje de solicitud de ingreso de datos
+std::string UIService::showInputRequest(const char* message) const {
+    std::string input;
+    std::wcout << message << std::endl;
+    std::cin >> input;
+
+    return input;
 }
 
 // Limpiar la pantalla
