@@ -17,8 +17,6 @@ void UIService::showMainMenu() const {
 }
 
 void UIService::clearScreen() const {
-    for (int i = 0; i < 100; i++) {
-        std::wcout << std::endl;
-    }
+    std::cout << "\033[2J\033[1;1H";
 }
 
