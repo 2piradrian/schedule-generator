@@ -1,6 +1,7 @@
 #include <iostream>
 #include "uiservice.h"
 
+// Mostrar el menú principal
 void UIService::showMainMenu() const {
     clearScreen();
 
@@ -16,6 +17,7 @@ void UIService::showMainMenu() const {
     std::wcout << L"\nSeleccione una opcion: " << std::endl;
 }
 
+// Limpiar la pantalla
 void UIService::clearScreen() const {
     std::cout << "\033[2J\033[1;1H";
 }

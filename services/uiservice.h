@@ -3,9 +3,11 @@
 
 class UIService {
 public:
+    // Muestra el menú principal
     void showMainMenu() const;
 
 private:
+    // Limpia la pantalla
     void clearScreen() const;
 };
 
