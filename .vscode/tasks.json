@@ -8,7 +8,8 @@
                 "-fdiagnostics-color=always",
                 "-g",
                 "${workspaceFolder}/main.cpp",                
-                "${workspaceFolder}/models/subject.cpp",     
+                "${workspaceFolder}/models/subject.cpp",
+                "${workspaceFolder}/services/uiservice.cpp",     
                 "-o",
                 "${workspaceFolder}/scheduler.exe"             
             ],
